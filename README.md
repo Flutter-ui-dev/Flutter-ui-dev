@@ -9,6 +9,9 @@ Fade Shimmer under 30 seconds [Go](./fade-shimmer-30s)
 Adaptive Theming in Flutter with Provider
 [Go](./adaptive-theming-in-flutter)
 
+Lottie Animation in Flutter
+[Go](./lottie-animation)
+
 ### Speed Code
 
 Meditation App from Scratch [Go](./speed-code/meditation-app/)
