@@ -15,3 +15,5 @@ Lottie Animation in Flutter
 ### Speed Code
 
 Meditation App from Scratch [Go](./speed-code/meditation-app/)
+
+Banking App Minimal UI [Go](./speed-code/banking-app/)
