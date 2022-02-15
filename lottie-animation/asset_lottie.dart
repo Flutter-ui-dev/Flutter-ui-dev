@@ -56,3 +56,6 @@ class _AssetLottieState extends State<AssetLottie>
     );
   }
 }
+
+
+Lottie.asset('assets/loading.json',),
