@@ -12,6 +12,9 @@ Adaptive Theming in Flutter with Provider
 Lottie Animation in Flutter
 [Go](./lottie-animation)
 
+Add Firebase to Flutter Apps using FlutterFire CLI
+[Go](./add-firebase-to-flutter)
+
 ### Speed Code
 
 Meditation App from Scratch [Go](./speed-code/meditation-app/)
