@@ -22,3 +22,5 @@ Meditation App from Scratch [Go](./speed-code/meditation-app/)
 Banking App Minimal UI [Go](./speed-code/banking-app/)
 
 Foode Delivery App UI [Go](./speed-code/food-delivery-app/)
+
+NFT Marketplace App UI[Go](./speed-code/nft-app/)
