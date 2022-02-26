@@ -15,6 +15,9 @@ Lottie Animation in Flutter
 Add Firebase to Flutter Apps using FlutterFire CLI
 [Go](./add-firebase-to-flutter)
 
+Complete Guide to Neumorphism
+[Go](./neumorphism-guide)
+
 ### Speed Code
 
 Meditation App from Scratch [Go](./speed-code/meditation-app/)
