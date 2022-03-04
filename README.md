@@ -18,6 +18,9 @@ Add Firebase to Flutter Apps using FlutterFire CLI
 Complete Guide to Neumorphism
 [Go](./neumorphism-guide)
 
+Native Splash Screen
+[Go](./native-splash-screen)
+
 ### Speed Code
 
 Meditation App from Scratch [Go](./speed-code/meditation-app/)
