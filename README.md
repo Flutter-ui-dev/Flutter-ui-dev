@@ -29,4 +29,6 @@ Banking App Minimal UI [Go](./speed-code/banking-app/)
 
 Foode Delivery App UI [Go](./speed-code/food-delivery-app/)
 
-NFT Marketplace App UI[Go](./speed-code/nft-app/)
+NFT Marketplace App UI #1[Go](./speed-code/nft-marketplace-ui/)
+
+NFT App UI #2[Go](./speed-code/nft-app/)

@@ -11,13 +11,13 @@ class SlideAnimation extends StatelessWidget {
     this.end = const Offset(0, 0),
     this.intervalStart = 0,
     this.intervalEnd = 1,
-    this.duration = const Duration(milliseconds: 750),
+    this.duration = const Duration(milliseconds: 650),
     this.curve = Curves.fastOutSlowIn,
   }) : super(key: key);
 
   ///Animate from value
   ///
-  ///[default value Offset(250,0)]
+  ///[default value Offset(250,0)j
   final Offset begin;
 
   ///Animate to value

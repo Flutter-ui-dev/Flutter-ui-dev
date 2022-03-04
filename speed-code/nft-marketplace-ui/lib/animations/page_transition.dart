@@ -35,7 +35,7 @@ class PageTransition extends PageRouteBuilder {
     required this.child,
     required this.type,
     this.curve = Curves.fastOutSlowIn,
-    this.duration = const Duration(milliseconds: 450),
+    this.duration = const Duration(milliseconds: 400),
   }) : super(
           transitionDuration: duration,
           pageBuilder: (_, animation, secondaryAnimation) => child,

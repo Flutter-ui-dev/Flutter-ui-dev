@@ -1,192 +1,150 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:nftapp/animations/fade_animation.dart';
-import 'package:nftapp/animations/slide_animation.dart';
-import 'package:nftapp/constants.dart';
+import 'package:nft/animations/fade_animation.dart';
+import 'package:nft/widgets/blur_container.dart';
 
 class NFTScreen extends StatelessWidget {
-  const NFTScreen({Key? key}) : super(key: key);
+  const NFTScreen({Key? key, required this.image}) : super(key: key);
+
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      backgroundColor: Colors.black,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
             children: [
-              SizedBox(height: 50.h),
-              const _AppBar(),
-              SizedBox(height: 32.h),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Colors.black26),
-                ),
-                child: Hero(
-                  tag: '1',
-                  child: Image.asset(
-                    'assets/images/image-1.jpeg',
-                    height: 260.h,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+              Hero(
+                tag: image,
+                child: Image.asset(image),
               ),
-              SizedBox(height: 24.h),
-              SlideAnimation(
-                intervalStart: 0.4,
-                begin: const Offset(0, 30),
+              Positioned(
+                bottom: 10,
+                left: 10,
                 child: FadeAnimation(
-                  intervalStart: 0.4,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'DAY 74',
+                  intervalEnd: 0.1,
+                  child: BlurContainer(
+                    child: Container(
+                      width: 160,
+                      height: 40,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white.withOpacity(0.1),
+                      ),
+                      child: const Text(
+                        'Digital NFT Art',
                         style: TextStyle(
-                          fontSize: 24.r,
                           fontWeight: FontWeight.bold,
+                          fontSize: 12,
                         ),
                       ),
-                      SizedBox(height: 8.h),
-                      Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(100),
-                            child: Image.asset(
-                              'assets/images/profile.jpg',
-                              width: 20.r,
-                            ),
-                          ),
-                          SizedBox(width: 8.h),
-                          const Text(
-                            '@Mark Rise',
-                            style: TextStyle(
-                              color: Colors.black54,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 8.h),
-                      Text(
-                        'Who we were and what we will become are there, they are around us, they are batting, they are resting and they are being watched...More',
-                        style: bodyTextStyle,
-                      ),
-                      SizedBox(height: 8.h),
-                      const Divider(),
-                      SizedBox(height: 8.h),
-                      ListTile(
-                        contentPadding: EdgeInsets.zero,
-                        leading: ClipRRect(
-                          borderRadius: BorderRadius.circular(100),
-                          child: Image.asset(
-                            'assets/images/user.jpeg',
-                            width: 40.r,
-                            height: 40.r,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        title: const Text('Highest Bid Placed By'),
-                        subtitle: Text(
-                          'Merry Rose',
-                          style: TextStyle(
-                            fontSize: 16.r,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        trailing: Text(
-                          '15.97 ETH',
-                          style: TextStyle(
-                            fontSize: 16.r,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 16.h),
-                      const Button(),
-                    ],
+                    ),
                   ),
                 ),
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class Button extends StatelessWidget {
-  const Button({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 20.w,
-        vertical: 16.h,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: Colors.black,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text(
-            'Place Bid',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16.r,
-              fontWeight: FontWeight.bold,
+          const SizedBox(height: 30),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: FadeAnimation(
+              intervalStart: 0.3,
+              child: Text(
+                'Monkey #271',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ),
-          Text(
-            '20h: 35m: 08s',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18.r,
+          const SizedBox(height: 5),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: FadeAnimation(
+              intervalStart: 0.35,
+              child: Text(
+                'Owned by Gennady',
+                style: TextStyle(
+                  color: Colors.white70,
+                ),
+              ),
             ),
           ),
+          const SizedBox(height: 50),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: FadeAnimation(
+              intervalStart: 0.4,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const <Widget>[
+                  _InfoTile(title: '3d 5h 23m', subtitle: 'Remaining Time'),
+                  _InfoTile(title: '16.7 ETH', subtitle: 'Highest Bid'),
+                ],
+              ),
+            ),
+          ),
+          const Spacer(),
+          FadeAnimation(
+            intervalStart: 0.6,
+            child: Container(
+              width: double.infinity,
+              height: 50,
+              alignment: Alignment.center,
+              margin: const EdgeInsets.symmetric(horizontal: 8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: const Color(0xff3000ff),
+              ),
+              child: const FadeAnimation(
+                intervalStart: 0.8,
+                child: Text(
+                  'Place Bid',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 50),
         ],
       ),
     );
   }
 }
 
-class _AppBar extends StatelessWidget {
-  const _AppBar({Key? key}) : super(key: key);
+class _InfoTile extends StatelessWidget {
+  const _InfoTile({Key? key, required this.title, required this.subtitle})
+      : super(key: key);
+
+  final String title;
+  final String subtitle;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: const Icon(Icons.arrow_back),
-        ),
-        SizedBox(width: 16.h),
         Text(
-          'Auctions',
-          style: TextStyle(
-            fontSize: 16.r,
+          title,
+          style: const TextStyle(
+            fontSize: 16,
             fontWeight: FontWeight.bold,
           ),
         ),
-        const Spacer(),
-        const Icon(
-          Iconsax.heart5,
-          color: Colors.red,
+        const SizedBox(height: 5),
+        Text(
+          subtitle,
+          style: const TextStyle(
+            color: Colors.white70,
+          ),
         ),
-        SizedBox(width: 16.h),
-        const Icon(Iconsax.menu_1),
       ],
     );
   }

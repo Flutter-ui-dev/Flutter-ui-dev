@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 ///Animates the child
 ///
 ///using TweenAnimationBuilder
-class SlideAnimation extends StatelessWidget {
-  const SlideAnimation({
+class ScaleAnimation extends StatelessWidget {
+  const ScaleAnimation({
     Key? key,
     required this.child,
-    this.begin = const Offset(250, 0),
-    this.end = const Offset(0, 0),
+    this.begin = 0.4,
+    this.end = 1,
     this.intervalStart = 0,
     this.intervalEnd = 1,
     this.duration = const Duration(milliseconds: 750),
@@ -17,13 +17,18 @@ class SlideAnimation extends StatelessWidget {
 
   ///Animate from value
   ///
-  ///[default value Offset(250,0)]
-  final Offset begin;
+  ///[default value 0.4]
+  final double begin;
 
   ///Animate to value
   ///
-  ///[default value Offset(0,0)]
-  final Offset end;
+  ///[default value 1]
+  final double end;
+
+  ///Animation Duration
+  ///
+  ///[default is 750ms]
+  final Duration duration;
 
   ///Animation delay
   ///
@@ -35,11 +40,6 @@ class SlideAnimation extends StatelessWidget {
   ///[default is 1]
   final double intervalEnd;
 
-  ///Animation Duration
-  ///
-  ///[default is 750ms]
-  final Duration duration;
-
   ///Animation Curve
   ///
   ///[default is Curves.fastOutSlowIn]
@@ -50,14 +50,14 @@ class SlideAnimation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TweenAnimationBuilder<Offset>(
-      tween: Tween<Offset>(begin: begin, end: end),
+    return TweenAnimationBuilder<double>(
+      tween: Tween<double>(begin: begin, end: end),
       duration: duration,
       curve: Interval(intervalStart, intervalEnd, curve: curve),
       child: child,
-      builder: (BuildContext context, Offset? value, Widget? child) {
-        return Transform.translate(
-          offset: value!,
+      builder: (BuildContext context, double? value, Widget? child) {
+        return Transform.scale(
+          scale: value!,
           child: child,
         );
       },

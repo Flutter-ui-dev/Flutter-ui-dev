@@ -11,7 +11,7 @@ class FadeAnimation extends StatelessWidget {
     this.end = 1,
     this.intervalStart = 0,
     this.intervalEnd = 1,
-    this.duration = const Duration(milliseconds: 650),
+    this.duration = const Duration(milliseconds: 3000),
     this.curve = Curves.fastOutSlowIn,
   }) : super(key: key);
 
