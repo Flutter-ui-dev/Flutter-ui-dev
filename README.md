@@ -21,6 +21,10 @@ Complete Guide to Neumorphism
 Native Splash Screen
 [Go](./native-splash-screen)
 
+### UI Build
+
+Banking App Neumorphic Pt. 1 - [Go](./ui-build/)
+
 ### Speed Code
 
 Meditation App from Scratch [Go](./speed-code/meditation-app/)

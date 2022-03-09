@@ -25,6 +25,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+void doStuff() {}
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
