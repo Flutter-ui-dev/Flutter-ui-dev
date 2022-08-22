@@ -23,7 +23,7 @@ Native Splash Screen
 
 ### Tutorials
 
-Frosted Glass Efffect - [Go](./tutorials/frosted_glass_effect.dart)
+Frosted Glass Effect - [Go](./tutorials/frosted_glass_effect.dart)
 
 ### UI Build
 
