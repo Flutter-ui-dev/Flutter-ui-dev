@@ -21,6 +21,10 @@ Complete Guide to Neumorphism
 Native Splash Screen
 [Go](./native-splash-screen)
 
+### Tutorials
+
+Frosted Glass Efffect - [Go](./tutorials/frosted_glass_effect.dart)
+
 ### UI Build
 
 Banking App Neumorphic Pt. 1 - [Go](./ui-build/)
