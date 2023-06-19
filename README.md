@@ -4,6 +4,12 @@
 
 Fade Shimmer under 30 seconds [Go](./fade-shimmer-30s)
 
+### UI Challenges
+
+Tinder X Postcards [Go](./ui-challenges/tinder-x-postcard/)
+
+Marvel Movie App [Go](./ui-challenges/marvel-movie-app/)
+
 ### YT
 
 Adaptive Theming in Flutter with Provider
